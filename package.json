@@ -1,0 +1,28 @@
+{
+    "name": "06-github-actions",
+    "version": "1.0.0",
+    "description": "- ...",
+    "main": "index.js",
+    "scripts": {
+        "dev": "next dev",
+        "start": "next start",
+        "lint": "next lint",
+        "lint:fix": "next lint --fix",
+        "export:output": "next build && next export-output",
+        "build": "rm -rf build && next build && next export && mv ./out ./build"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+        "eslint": "^8.57.0",
+        "next": "^14.1.3",
+        "postcss": "^8.4.31",
+        "react": "^18.2.0",
+        "react-dom": "^18.2.0"
+    },
+    "devDependencies": {
+        "eslint-config-next": "14.1.3",
+        "prettier": "^3.2.5"
+    }
+}
