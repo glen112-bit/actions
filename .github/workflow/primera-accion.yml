@@ -22,6 +22,10 @@ jobs:
 
       # Runs an other single command using the runners shell
       - name: Run a one-line script
+        run: echo Puro weando!
+
+      # Runs an other single command using the runners shell
+      - name: Run a one-line script
         run: echo Hola que Tal!
 
       # Runs a list files command
