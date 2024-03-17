@@ -7,9 +7,8 @@
         "dev": "next dev",
         "start": "next start",
         "lint": "next lint",
-        "lint:fix": "next lint --fix",
-        "export:output": "next build && next export-output",
-        "build": "rm -rf build && next build && next export && mv ./out ./build"
+        "build": "rm -rf build && next build && mv out build",
+        "output:export": "next output-export"
     },
     "keywords": [],
     "author": "",
