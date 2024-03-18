@@ -13,3 +13,12 @@ jobs:
         run: npm install
       - name: Run Linter
         run: npm run lint
+  preview:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Run Installation
+        run: npm install
+      - name: Run previw deployment
+        run: npm run deploy:preview
+
