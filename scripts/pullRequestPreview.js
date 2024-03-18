@@ -17,6 +17,7 @@ console.log(`You can see the deploy preview on: ${DEPLOY_URL}`);
 
 console.log("[GITHUB_COMMENT]: START");
 const { GITHUB_TOKEN, GITHUB_REPOSITORY, GITHUB_PR_NUMBER } = process.env;
+console.log('valores: ', GITHUB_TOKEN, GITHUB_REPOSITORY, GITHUB_PR_NUMBER);
 const GH_COMMENT = `
 - Deploy URL: [${DEPLOY_URL}](${DEPLOY_URL})
 `;
@@ -27,8 +28,10 @@ defaultHeaders["accept"] =
   "application/vnd.github.v3+json; application/vnd.github.antiope-preview+json";
 defaultHeaders["content-type"] = "application/json";
 
- console.log("GITHUB_REPOSITORY", GITHUB_REPOSITORY);
- console.log("GITHUB_PR_NUMBER", GITHUB_PR_NUMBER);
+
+console.log("GITHUB_REPOSITORY", GITHUB_REPOSITORY);
+console.log("GITHUB_PR_NUMBER", GITHUB_PR_NUMBER);
+
 
 fetch(
   `https://api.github.com/repos/${GITHUB_REPOSITORY}/issues/${GITHUB_PR_NUMBER}/comments`,
@@ -45,7 +48,7 @@ fetch(
     throw new Error(response.statusText);
   })
   .catch((err) => {
-    console.log("[COMMENT_ON_GITHUB: ERROR]");
+    console.log("[COMMENT_ON_GITHUB: ERROR]", err);
    // throw new Error(err);
   })
   .finally(() => {
