@@ -11,7 +11,8 @@
     "lint:fix": "next lint --fix",
     "build": "rm -rf build && next build && mv ./out ./build",
     "deploy": "npm run build && npx vercel ./build --yes  ",
-    "deploy:prod": "npm run build && npx vercel ./build --yes  --token=$VERCEL_TOKEN --prod",
+    "deploy:prod": "npm run deploy:staging --prod",
+    "deploy:staging": "npm run build && npx vercel ./build --yes  --token=$VERCEL_TOKEN",
     "output:export": "next output-export",
     "deploy:preview": "node ./scripts/pullRequestPreview"
   },
