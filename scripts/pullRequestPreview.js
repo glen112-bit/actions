@@ -28,8 +28,10 @@ defaultHeaders["accept"] =
   "application/vnd.github.v3+json; application/vnd.github.antiope-preview+json";
 defaultHeaders["content-type"] = "application/json";
 
+
 console.log("GITHUB_REPOSITORY", GITHUB_REPOSITORY);
 console.log("GITHUB_PR_NUMBER", GITHUB_PR_NUMBER);
+
 
 fetch(
   `https://api.github.com/repos/${GITHUB_REPOSITORY}/issues/${GITHUB_PR_NUMBER}/comments`,
@@ -46,8 +48,8 @@ fetch(
     throw new Error(response.statusText);
   })
   .catch((err) => {
-    console.log("[COMMENT_ON_GITHUB: ERROR]");
-    throw new Error(err);
+    console.log("[COMMENT_ON_GITHUB: ERROR]", err);
+   // throw new Error(err);
   })
   .finally(() => {
     console.log("[COMMENT_ON_GITHUB: END]");
