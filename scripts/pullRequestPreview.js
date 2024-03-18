@@ -1,6 +1,6 @@
 // console.log("hola que lat")
 import { execSync } from "child_process";
-// import fetch from "node-fetch";
+import fetch from "node-fetch";
 
 console.log("[DEPLOY_PREVIEW]: START");
 const command = "npm run deploy:staging";
