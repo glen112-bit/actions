@@ -38,7 +38,7 @@ fetch(
     body: JSON.stringify({
       body: GH_COMMENT,
     }),
-  }
+  },
 )
   .then((response) => {
     if (response.ok) return response.json();
