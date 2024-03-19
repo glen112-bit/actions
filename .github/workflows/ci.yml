@@ -34,7 +34,7 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           node-version: 20.11.0
-          cache: 'npm i'
+          cache: 'npm'
       # https://docs.cypress.io/guides/continuous-integration/github-actions#Testing-in-Chrome-and-Firefox-with-Cypress-Docker-Images
       - name: Cypress
         uses: cypress-io/github-action@v4
